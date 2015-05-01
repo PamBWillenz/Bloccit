@@ -33,3 +33,5 @@ Made with my mentor at [Bloc](http://bloc.io).
 
 Created Heroku app - pamwillenz-bloccit
 https://pamwillenz-bloccit.herokuapp.com/
+
+Will submit again to get commit on the checkpoint-21-static-pages branch
