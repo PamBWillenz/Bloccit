@@ -1,4 +1,5 @@
 module ApplicationHelper
-  
- link_to "Pam", my_name_path 
+  def my_name  
+ link_to "Pam", welcome_about_path 
+  end
 end
