@@ -2,11 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.social-btn {
+  .social-btn {
   position: absolute;
-  left: 20px;
-  text-shadow:1px 1px 0 rgba(0, 0, 0, 0, 0.75);
-  background-color:rgba(0, 0, 0, 0, 0.75);
-  border-radius:3px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  left: 136px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.75);
+  background-color: rgba(223, 231, 237, 0.36);
+  border-radius: 1px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 1.42857143;
 }
+
