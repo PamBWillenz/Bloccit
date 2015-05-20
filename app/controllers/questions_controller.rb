@@ -1,10 +1,12 @@
 class QuestionsController < ApplicationController
   def index
     @questions = Question.all
+    # render 'index.html.erb'
   end
 
   def new
     @question = Question.new
+    # render 'new.html.erb'
   end
 
   def create
