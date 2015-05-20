@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   # get 'question/destroy'
 
-  resources :question
+  resources :questions
 
   resources :posts
 
