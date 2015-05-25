@@ -8,8 +8,8 @@ class ApplicationController < ActionController::Base
    before_action :flash_attack
 
    def flash_attack
-+      flash[:notice] = "Warning: Flash Attack!"
-+  end
+     flash[:notice] = "Warning: Flash Attack!"
+   end
 
    protected
    def configure_permitted_parameters
