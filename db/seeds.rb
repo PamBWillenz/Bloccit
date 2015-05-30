@@ -20,6 +20,36 @@ users = User.all
 
 #The 'save' method then saves this User to the database.
 
+#Create moderator
+moderator = User.new(
+  name:      'Moderator',
+  email:     'moderator@example.com',
+  password:  'helloworld',
+  role:      'moderator'
+  )
+  moderator.skip_confirmation!
+  moderator.save!
+
+  #Create member
+  member = User.new(
+    name:     'Member User',
+    email:    'member@example.com',
+    password: 'helloworld',
+    role:     'member'
+  )
+  member.skip_confirmation!
+  member.save!
+
+  #Create guest
+  guest = User.new(
+    name:      'Guest User',
+    email:     'guest@example.com',
+    password:  'helloworld',
+    role:      'guest'
+  )
+  guest.skip_confirmation!
+  guest.save! 
+
 # Create Posts
 50.times do
   Post.create!(
