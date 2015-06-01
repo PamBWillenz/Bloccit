@@ -2,10 +2,12 @@ class PostPolicy < ApplicationPolicy
   
   class Scope < Scope
     def resolve
-      if user.admin? || user.moderator?
-        scope.all
-      elsif user.member?
-        scope.where(user_id: @user.id)
+      if user.present?
+        if user.admin? || user.moderator?
+          scope.all
+        elsif user.member?
+          scope.where(user_id: user.id)
+        end
       else
         scope.none
       end
@@ -13,7 +15,6 @@ class PostPolicy < ApplicationPolicy
   end
 
   def index?
-    user.admin? || user.id?
-    #true
+    true
   end
 end
