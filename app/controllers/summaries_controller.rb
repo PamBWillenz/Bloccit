@@ -22,7 +22,7 @@ class SummariesController < ApplicationController
 
   def create
     @topic = Topic.find(params[:topic_id])
-    @post = Post.find(params)[:post_id]
+    @post = Post.find(params[:post_id])
     @summary = @post.build_summary(params:[summary].permit(:body))
     if @summary.save
       flash[:notice] = "Summary was saved."
