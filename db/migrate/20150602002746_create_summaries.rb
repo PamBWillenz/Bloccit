@@ -1,8 +1,8 @@
 class CreateSummaries < ActiveRecord::Migration
   def change
-    create_table :summaries do |t|
+      create_table :summaries do |t|
       t.text :body
-      t.belongs_to :post, index: true, foreign_key: true
+      # t.belongs_to :post, index: true, foreign_key: true
 
       t.timestamps null: false
     end

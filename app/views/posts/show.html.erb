@@ -2,12 +2,13 @@
 
 <div class="row">
   <div class="col-md-8">
-    <% if @post.summary.present? %>
+
     <b> Post Summary: </b> 
-    <% Summary.find_by_post_id(@post.id).body %>
-    <%= link_to "Edit Summary", edit_summary_path(@post.summary), class: 'btn btn-success' %>
+    <% if @summary %>
+    <%= link_to "Edit Summary", edit_topic_post_summary_path(@topic, @post, @summary), class: 'btn btn-success' %>
+    <p><%= @post.summary.body %></p>
      <% else %>
-    <%= link_to "Add Summary", new_summary_path(@post), class: 'btn btn-success' %>
+    <%= link_to "Add Summary", new_topic_post_summary_path(@topic, @post, @summary), class: 'btn btn-success' %>
     <% end %>
 
     <p><%= @post.body %></p>
