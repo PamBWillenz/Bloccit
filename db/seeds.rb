@@ -43,7 +43,7 @@ posts = Post.all
 # Create Comments
 100.times do
   Comment.create!(
-    # user: users.sample,  #we have not yet associated Users with Comments
+    user: users.sample,  
     post: posts.sample,
     body: Faker::Lorem.paragraph
   )
@@ -79,6 +79,7 @@ member.skip_confirmation!
 member.save!
 
 puts "Seed finished"
+puts "#{Topic.count} topics created"
 puts "#{User.count} users created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
