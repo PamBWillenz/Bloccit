@@ -19,10 +19,13 @@
   </div>
   <div class="col-md-4">
     <% if policy(@post).edit? %>
-      <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
+      <%= link_to "Edit Post", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
     <% end %>
-    <h3>Add a Comment</h3>
+    <br>
+    <br>
+    <% if policy(Comment.new).create? %>
     <%= render 'comments/form', topic: @topic, comment: @comment, post: @post %>   
+    <% end %>
   </div>
 </div>
 
