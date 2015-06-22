@@ -28,8 +28,8 @@
     <% end %>
     <br>
     <br>
-    <% if policy(Comment.new).create? %>
-    <%= render 'comments/form', topic: @topic, comment: @comment, post: @post %>   
+    <% if policy(@new_comment).create? %>
+      <%= render 'comments/form', topic: @topic, comment: @comment, post: @post %>   
     <% end %>
   </div>
 </div>
