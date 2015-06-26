@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     @post.topic = @topic
     authorize @post
-    authorize @comment
+    #authorize @comment
     if @post.save
       flash[:notice] = "Post was saved."
       redirect_to [@topic, @post]
