@@ -2,7 +2,7 @@ require 'rails_helper'
 
 include TestFactories
 
-describe Post do 
+describe Post do
   describe "vote methods" do
 
     before do
