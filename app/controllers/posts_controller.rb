@@ -17,7 +17,10 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     @post.topic = @topic
     authorize @post
+<<<<<<< HEAD
     #authorize @comment
+=======
+>>>>>>> checkpoint-49-voting
     if @post.save
       @post.create_vote
       flash[:notice] = "Post was saved."
