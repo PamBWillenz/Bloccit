@@ -17,6 +17,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.voted {
+  opacity: 0.5;
+}
+
 .favorite {
   margin-top: 20px;
 }
