@@ -2,18 +2,15 @@ require 'rails_helper'
 
 describe User do
 
-  include TestFactories
-  
+  # before do
+  #   @user = create(:user)
+  #   @post = create(:post, user: @user)
+  # end
+
   # describe "#favorited(post)" do
-
-  #   before do
-  #     @user = create(:user)
-  #     @post = create(:post)
-  #   end
-
   #   it "returns `nil` if the user has not favorited the post" do
-  #     expect ( @user.favorited(@post) ).to eq(nil)
-  #   end
+  #   expect ( @user.favorited(@post) ).to eq(nil)
+  # end
 
   #   it "returns the appropriate favorite if it exists" do
   #     favorite = @user.favorites.create(post: @post)
@@ -27,6 +24,7 @@ describe User do
       @user1 = create(:user_with_post_and_comment)
       @user2 = create(:user)
       post = create(:post, user: @user2)
+      2.times { create(:comment, user: @user2, post: post) }
     end
 
     it "returns users ordered by comments + posts" do
