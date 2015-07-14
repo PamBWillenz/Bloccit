@@ -2,15 +2,15 @@ require 'rails_helper'
 
 describe User do
 
-  include TestFactories
+  # include TestFactories
 
-  describe "#favorited(post)" do
-    xit "returns `nil` if the user has not favorited the post" do
-    end
+  # describe "#favorited(post)" do
+  #   xit "returns `nil` if the user has not favorited the post" do
+  #   end
 
-    xit "returns the appropriate favorite if it exists" do
-    end
-  end
+  #   xit "returns the appropriate favorite if it exists" do
+  #   end
+  # end
 
   describe ".top_rated" do
 
@@ -33,6 +33,18 @@ describe User do
     it "stores a `comments_count` on user" do
       users = User.top_rated
       expect( users.first.comments_count ).to eq(2)
+    end
+  end
+
+  describe "FactoryGirl.user_with_post_and_comment" do
+
+    before do 
+      @user = create(:user_with_post_and_comment)
+    end
+
+    it "tests a FactoryGirl method" do
+      expect( Post.where(user_id: @user.id).count).to eq(1)
+      expect( Comment.where(user_id: @user.id).count ).to eq(1)
     end
   end
 end
