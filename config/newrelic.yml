@@ -3,20 +3,20 @@
 # .NET, PHP, Python and Node applications with deep visibility and low
 # overhead.  For more information, visit www.newrelic.com.
 #
-# Generated July 08, 2015
+# Generated July 15, 2015
 # 
-# This configuration file is custom generated for Student_1276
+# This configuration file is custom generated for app36373673@heroku.com
 #
 # For full documentation of agent configuration options, please refer to
 # https://docs.newrelic.com/docs/agents/ruby-agent/installation-configuration/ruby-agent-configuration
 
 common: &default_settings
   # Required license key associated with your New Relic account.
-  license_key: 941522a070d1c5cb6b9108b7152ab5411a0c025e
+  license_key: f8c53d15b7266b16e193e5074a17d7afea059628
 
   # Your application name. Renaming here affects where data displays in New
   # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications
-  app_name: pamwillenz-bloccit
+  app_name: My Application
 
   # To disable the agent regardless of other settings, uncomment the following:
   # agent_enabled: false
